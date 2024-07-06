@@ -1,9 +1,7 @@
 package com.openclassrooms.tourguide.user;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import gpsUtil.location.VisitedLocation;
@@ -16,7 +14,7 @@ public class User {
 	private String emailAddress;
 	private Date latestLocationTimestamp;
 	private List<VisitedLocation> visitedLocations =  new CopyOnWriteArrayList<>();
-	private List<UserReward> userRewards =  new CopyOnWriteArrayList<>();
+	private Map<String, UserReward> userRewards =  new ConcurrentHashMap<>();
 	private UserPreferences userPreferences = new UserPreferences();
 	private List<Provider> tripDeals = new ArrayList<>();
 	public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
@@ -71,12 +69,13 @@ public class User {
 	}
 	
 	public void addUserReward(UserReward userReward) {
-		userRewards.add(userReward);
+		String userRewardAttractionName = userReward.attraction.attractionName;
+		if(!userRewards.containsKey(userRewardAttractionName)) {
+			userRewards.put(userRewardAttractionName, userReward);
+		}
 	}
 	
-	public List<UserReward> getUserRewards() {
-		return userRewards;
-	}
+	public Map<String, UserReward> getUserRewards() { return userRewards; }
 	
 	public UserPreferences getUserPreferences() {
 		return userPreferences;
