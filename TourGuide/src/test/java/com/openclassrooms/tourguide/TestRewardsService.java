@@ -4,10 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -37,7 +34,7 @@ public class TestRewardsService {
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(0), new Date()));
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(1), new Date()));
 		tourGuideService.trackUserLocation(user);
-		Collection<UserReward> userRewards = user.getUserRewards();
+		Map<String, UserReward> userRewards = user.getUserRewards();
 		tourGuideService.tracker.stopTracking();
 		assertThat(userRewards).hasSize(2);
 	}

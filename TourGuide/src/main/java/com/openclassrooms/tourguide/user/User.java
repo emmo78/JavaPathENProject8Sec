@@ -69,14 +69,13 @@ public class User {
 	}
 	
 	public void addUserReward(UserReward userReward) {
-		userRewards.put(userReward.attraction.attractionName, userReward);
+		String userRewardAttractionName = userReward.attraction.attractionName;
+		if(!userRewards.containsKey(userRewardAttractionName)) {
+			userRewards.put(userRewardAttractionName, userReward);
+		}
 	}
 	
-	public Collection<UserReward> getUserRewards() {
-		return userRewards.values();
-	}
-
-	public Map<String, UserReward> getUserRewardsMap() { return userRewards; }
+	public Map<String, UserReward> getUserRewards() { return userRewards; }
 	
 	public UserPreferences getUserPreferences() {
 		return userPreferences;
