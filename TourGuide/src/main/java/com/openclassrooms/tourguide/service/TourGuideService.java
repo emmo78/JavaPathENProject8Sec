@@ -1,5 +1,6 @@
 package com.openclassrooms.tourguide.service;
 
+import com.openclassrooms.tourguide.dto.NearbyAttractionDTO;
 import com.openclassrooms.tourguide.helper.InternalTestHelper;
 import com.openclassrooms.tourguide.tracker.Tracker;
 import com.openclassrooms.tourguide.user.User;
@@ -16,10 +17,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import gpsUtil.GpsUtil;
-import gpsUtil.location.Attraction;
 import gpsUtil.location.Location;
 import gpsUtil.location.VisitedLocation;
 
+import rewardCentral.RewardCentral;
 import tripPricer.Provider;
 import tripPricer.TripPricer;
 
@@ -88,15 +89,25 @@ public class TourGuideService {
 		return visitedLocation;
 	}
 
-	public List<Attraction> getNearByAttractions(VisitedLocation visitedLocation) {
-		List<Attraction> nearbyAttractions = new ArrayList<>();
-		for (Attraction attraction : gpsUtil.getAttractions()) {
-			if (rewardsService.isWithinAttractionProximity(attraction, visitedLocation.location)) {
-				nearbyAttractions.add(attraction);
-			}
-		}
-
-		return nearbyAttractions;
+	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
+		RewardCentral rewardCentral = new RewardCentral();
+		List<NearbyAttractionDTO> fiveClosestAttractions = gpsUtil.getAttractions()
+				.parallelStream()
+				.map(attraction ->  NearbyAttractionDTO.builder()
+						.attraction(attraction)
+						.attractionName(attraction.attractionName)
+						.attractionLongitude(attraction.longitude)
+						.attractionLatitude(attraction.latitude)
+						.userLongitude(visitedLocation.location.longitude)
+						.userLatitude(visitedLocation.location.latitude)
+						.build())
+				.peek(nAD -> nAD.calculateDistanceUserAttractionMiles(rewardsService, visitedLocation))
+				.sorted((nAD1, nAD2) -> nAD1.getDistanceUserAttractionMiles() > nAD2.getDistanceUserAttractionMiles() ? 1 : -1)
+				.limit(5)
+				.peek(nAD -> nAD.setVisitingRewardAttractionPoints(
+						rewardCentral.getAttractionRewardPoints(nAD.getAttraction().attractionId, visitedLocation.userId)))
+				.toList();
+		return fiveClosestAttractions;
 	}
 
 	private void addShutDownHook() {
