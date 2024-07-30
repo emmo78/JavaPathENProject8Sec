@@ -9,6 +9,9 @@ import com.openclassrooms.tourguide.user.UserReward;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -33,6 +36,8 @@ public class TourGuideService {
 	public final Tracker tracker;
 	boolean testMode = true;
 
+	private final ExecutorService esThreadPool = Executors.newCachedThreadPool();
+
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
 		this.gpsUtil = gpsUtil;
 		this.rewardsService = rewardsService;
@@ -54,8 +59,10 @@ public class TourGuideService {
 	}
 
 	public VisitedLocation getUserLocation(User user) {
-		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ? user.getLastVisitedLocation()
-				: trackUserLocation(user);
+		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
+				user.getLastVisitedLocation()
+				//Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
+				: trackUserLocation(user).join();
 		return visitedLocation;
 	}
 
@@ -82,11 +89,14 @@ public class TourGuideService {
 		return providers;
 	}
 
-	public VisitedLocation trackUserLocation(User user) {
-		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
-		user.addToVisitedLocations(visitedLocation);
-		rewardsService.calculateRewards(user);
-		return visitedLocation;
+	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
+		CompletableFuture<VisitedLocation> cfTrackUserLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPool);
+		// will return a CompletableFuture<Void>
+		cfTrackUserLocation.thenAcceptAsync(vl -> {
+			user.addToVisitedLocations(vl);
+			rewardsService.calculateRewards(user);
+		}, esThreadPool);
+		return cfTrackUserLocation;
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
