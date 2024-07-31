@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +33,7 @@ public class TestRewardsService {
 		List<Attraction> attractions = gpsUtil.getAttractions();
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(0), new Date()));
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(1), new Date()));
-		tourGuideService.trackUserLocation(user);
+		tourGuideService.trackUserLocation(user).forEach(CompletableFuture::join);
 		Map<String, UserReward> userRewards = user.getUserRewards();
 		tourGuideService.tracker.stopTracking();
 		assertThat(userRewards).hasSize(2);

@@ -36,6 +36,8 @@ public class TourGuideService {
 	public final Tracker tracker;
 	boolean testMode = true;
 
+	//for Async methods, to runn a corresponding execution step in another thread.
+	// instead the common fork/join pool implementation of Executor
 	private final ExecutorService esThreadPool = Executors.newCachedThreadPool();
 
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
@@ -62,7 +64,7 @@ public class TourGuideService {
 		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
 				user.getLastVisitedLocation()
 				//Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
-				: trackUserLocation(user).join();
+				: (VisitedLocation) trackUserLocation(user).get(0).join();
 		return visitedLocation;
 	}
 
@@ -89,14 +91,13 @@ public class TourGuideService {
 		return providers;
 	}
 
-	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
+	public List<CompletableFuture> trackUserLocation(User user) {
 		CompletableFuture<VisitedLocation> cfTrackUserLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPool);
-		// will return a CompletableFuture<Void>
-		cfTrackUserLocation.thenAcceptAsync(vl -> {
+		CompletableFuture<Void> cfcalculateRewards = cfTrackUserLocation.thenAcceptAsync(vl -> {
 			user.addToVisitedLocations(vl);
 			rewardsService.calculateRewards(user);
 		}, esThreadPool);
-		return cfTrackUserLocation;
+		return List.of(cfTrackUserLocation, cfcalculateRewards);
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
