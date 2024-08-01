@@ -23,7 +23,9 @@ public class TestRewardsService {
 
 	@Test
 	public void userGetRewards() {
+		//GIVEN
 		GpsUtil gpsUtil = new GpsUtil();
+		//Class under test
 		RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
 
 		InternalTestHelper.setInternalUserNumber(0);
@@ -33,7 +35,12 @@ public class TestRewardsService {
 		List<Attraction> attractions = gpsUtil.getAttractions();
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(0), new Date()));
 		user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attractions.get(1), new Date()));
-		tourGuideService.trackUserLocation(user).forEach(CompletableFuture::join);
+		tourGuideService.trackUserLocation(user).join();
+
+		//WHEN
+		rewardsService.calculateRewards(user).join();
+
+		//THEN
 		Map<String, UserReward> userRewards = user.getUserRewards();
 		tourGuideService.tracker.stopTracking();
 		assertThat(userRewards).hasSize(2);
@@ -57,7 +64,7 @@ public class TestRewardsService {
 		InternalTestHelper.setInternalUserNumber(1);
 		TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
 
-		rewardsService.calculateRewards(tourGuideService.getAllUsers().get(0));
+		rewardsService.calculateRewards(tourGuideService.getAllUsers().get(0)).join();
 		Collection<UserReward> userRewards = tourGuideService.getUserRewards(tourGuideService.getAllUsers().get(0));
 		tourGuideService.tracker.stopTracking();
 

@@ -1,6 +1,9 @@
 package com.openclassrooms.tourguide.service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.springframework.stereotype.Service;
 
@@ -22,33 +25,46 @@ public class RewardsService {
 	private int attractionProximityRange = 200;
 	private final GpsUtil gpsUtil;
 	private final RewardCentral rewardCentral;
+
+	//for Async methods, to runn a corresponding execution step in another thread.
+	// instead the common fork/join pool implementation of Executor
+	private final ExecutorService esThreadPoolRS = Executors.newCachedThreadPool();
 	
 	public RewardsService(GpsUtil gpsUtil, RewardCentral rewardCentral) {
 		this.gpsUtil = gpsUtil;
 		this.rewardCentral = rewardCentral;
 	}
-	
+
 	public void setProximityBuffer(int proximityBuffer) {
 		this.proximityBuffer = proximityBuffer;
 	}
-	
+
 	public void setDefaultProximityBuffer() {
 		proximityBuffer = defaultProximityBuffer;
 	}
 	
-	public void calculateRewards(User user) {
+	public CompletableFuture<Void> calculateRewards(User user) {
 		List<VisitedLocation> userLocations = user.getVisitedLocations();
-		List<Attraction> attractions = gpsUtil.getAttractions();
-		
-		for(VisitedLocation visitedLocation : userLocations) {
-			for(Attraction attraction : attractions) {
-				if(!user.getUserRewards().containsKey(attraction.attractionName)) {
-					if(nearAttraction(visitedLocation, attraction)) {
-						user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user)));
+		return CompletableFuture.supplyAsync(() -> gpsUtil.getAttractions(), esThreadPoolRS)
+			.thenAcceptAsync(attractions -> userLocations
+				.parallelStream()
+				.forEach(visitedLocation -> attractions
+					.parallelStream()
+					.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
+					.filter(attraction -> nearAttraction(visitedLocation, attraction))
+					.forEach(attraction -> user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user))))
+				)
+		, esThreadPoolRS);
+/*			for(VisitedLocation visitedLocation : userLocations) {
+				for(Attraction attraction : attractions) {
+					if(!user.getUserRewards().containsKey(attraction.attractionName)) {
+						if(nearAttraction(visitedLocation, attraction)) {
+							user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user)));
+						}
 					}
 				}
 			}
-		}
+*/
 	}
 	
 	public boolean isWithinAttractionProximity(Attraction attraction, Location location) {
