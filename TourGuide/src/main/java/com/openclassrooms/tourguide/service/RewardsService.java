@@ -26,9 +26,13 @@ public class RewardsService {
 	private final GpsUtil gpsUtil;
 	private final RewardCentral rewardCentral;
 
-	//for Async methods, to runn a corresponding execution step in another thread.
-	// instead the common fork/join pool implementation of Executor
-	private final ExecutorService esThreadPoolRS = Executors.newCachedThreadPool();
+	/*
+	 * for Async methods, to run a corresponding execution step in another thread.
+	 * instead the common fork/join pool implementation of Executor
+	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
+	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
+	 */
+	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(7);
 	
 	public RewardsService(GpsUtil gpsUtil, RewardCentral rewardCentral) {
 		this.gpsUtil = gpsUtil;
@@ -53,18 +57,7 @@ public class RewardsService {
 					.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
 					.filter(attraction -> nearAttraction(visitedLocation, attraction))
 					.forEach(attraction -> user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user))))
-				)
-		, esThreadPoolRS);
-/*			for(VisitedLocation visitedLocation : userLocations) {
-				for(Attraction attraction : attractions) {
-					if(!user.getUserRewards().containsKey(attraction.attractionName)) {
-						if(nearAttraction(visitedLocation, attraction)) {
-							user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user)));
-						}
-					}
-				}
-			}
-*/
+				), esThreadPoolRS);
 	}
 	
 	public boolean isWithinAttractionProximity(Attraction attraction, Location location) {

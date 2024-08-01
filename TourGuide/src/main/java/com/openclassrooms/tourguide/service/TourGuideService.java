@@ -42,7 +42,7 @@ public class TourGuideService {
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
-	private final ExecutorService esThreadPoolTG = Executors.newFixedThreadPool(7);
+	private final ExecutorService esThreadPoolTGS = Executors.newFixedThreadPool(7);
 
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
 		this.gpsUtil = gpsUtil;
@@ -65,18 +65,11 @@ public class TourGuideService {
 	}
 
 	public VisitedLocation getUserLocation(User user) {
-		VisitedLocation userLocation;
-		if (user.getVisitedLocations().size() > 0) {
-			userLocation = user.getLastVisitedLocation();
-		} else {
-			CompletableFuture<VisitedLocation> cfUserLocation = trackUserLocation(user);
-			//Execute async the rewards calculation so user don't wait for result
-			//Return a CompletableFuture<Void>
-			cfUserLocation.thenComposeAsync(uL -> rewardsService.calculateRewards(user), esThreadPoolTG);
-			//Returns the user location value when complete, or throws an (unchecked) exception if completed exceptionally.
-			userLocation = cfUserLocation.join();
-		}
-		return userLocation;
+		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
+				user.getLastVisitedLocation()
+				//Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
+				: trackUserLocation(user).join();
+		return visitedLocation;
 	}
 
 	public User getUser(String userName) {
@@ -103,11 +96,14 @@ public class TourGuideService {
 	}
 
 	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
-		return CompletableFuture.supplyAsync(() -> {
-			VisitedLocation userLocation = gpsUtil.getUserLocation(user.getUserId());
-			user.addToVisitedLocations(userLocation);
-			return userLocation;
-		}, esThreadPoolTG);
+		CompletableFuture<VisitedLocation> cfUserLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
+		//Execute async the rewards calculation so user don't wait for result
+		//Return a CompletableFuture<Void>
+		cfUserLocation.thenComposeAsync(uL -> {
+				user.addToVisitedLocations(uL);
+				return rewardsService.calculateRewards(user);
+			}, esThreadPoolTGS);
+		return cfUserLocation;
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
