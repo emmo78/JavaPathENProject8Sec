@@ -29,10 +29,11 @@ public class RewardsService {
 	/*
 	 * for Async methods, to run a corresponding execution step in another thread.
 	 * instead the common fork/join pool implementation of Executor
+	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but took about 25 min, 16 succeed !
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
-	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(7);
+	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(16);
 	
 	public RewardsService(GpsUtil gpsUtil, RewardCentral rewardCentral) {
 		this.gpsUtil = gpsUtil;

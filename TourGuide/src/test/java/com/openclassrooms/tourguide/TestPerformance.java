@@ -55,7 +55,7 @@ public class TestPerformance {
 		RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
 		// Users should be incremented up to 100,000, and test finishes within 15
 		// minutes
-		InternalTestHelper.setInternalUserNumber(100);
+		InternalTestHelper.setInternalUserNumber(100000);
 		TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
 
 		List<User> allUsers = new ArrayList<>();
@@ -63,11 +63,14 @@ public class TestPerformance {
 
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
-		//List<CompletableFuture> completableFutures =
+		//To Collect all the CompletableFutures
+		List<CompletableFuture<VisitedLocation>> completableFutures = new ArrayList<>();
 		for (User user : allUsers) {
-			tourGuideService.trackUserLocation(user);
+			completableFutures.add(tourGuideService.trackUserLocation(user));
 		}
-
+		// wait for the completion of all theCompletableFutures
+		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
+		allCompletableFutures.join();
 		stopWatch.stop();
 		tourGuideService.tracker.stopTracking();
 
