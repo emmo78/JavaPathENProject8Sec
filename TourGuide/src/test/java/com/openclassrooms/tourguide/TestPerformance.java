@@ -79,14 +79,14 @@ public class TestPerformance {
 		assertTrue(TimeUnit.MINUTES.toSeconds(15) >= TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()));
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	public void highVolumeGetRewards() {
 		GpsUtil gpsUtil = new GpsUtil();
 		RewardsService rewardsService = new RewardsService(gpsUtil, new RewardCentral());
 		// Users should be incremented up to 100,000, and test finishes within 20
 		// minutes
-		InternalTestHelper.setInternalUserNumber(1000);
+		InternalTestHelper.setInternalUserNumber(100000);
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
 		TourGuideService tourGuideService = new TourGuideService(gpsUtil, rewardsService);
@@ -96,7 +96,12 @@ public class TestPerformance {
 		allUsers = tourGuideService.getAllUsers();
 		allUsers.forEach(u -> u.addToVisitedLocations(new VisitedLocation(u.getUserId(), attraction, new Date())));
 
-		allUsers.forEach(u -> rewardsService.calculateRewards(u));
+		//To Collect all the CompletableFutures
+		List<CompletableFuture<Void>> completableFutures = new ArrayList<>();
+		allUsers.forEach(u -> completableFutures.add(rewardsService.calculateRewards(u)));
+		// wait for the completion of all theCompletableFutures
+		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
+		allCompletableFutures.join();
 
 		for (User user : allUsers) {
 			assertTrue(user.getUserRewards().size() > 0);

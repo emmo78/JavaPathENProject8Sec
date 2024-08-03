@@ -25,16 +25,15 @@ public class RewardsService {
 	private int attractionProximityRange = 200;
 	private final GpsUtil gpsUtil;
 	private final RewardCentral rewardCentral;
-
 	/*
 	 * for Async methods, to run a corresponding execution step in another thread.
 	 * instead the common fork/join pool implementation of Executor
-	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but took about 25 min, 16 succeed !
+	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried many values to 256 with success
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
-	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(16);
-	
+	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(256);
+
 	public RewardsService(GpsUtil gpsUtil, RewardCentral rewardCentral) {
 		this.gpsUtil = gpsUtil;
 		this.rewardCentral = rewardCentral;
@@ -51,16 +50,23 @@ public class RewardsService {
 	public CompletableFuture<Void> calculateRewards(User user) {
 		List<VisitedLocation> userLocations = user.getVisitedLocations();
 		return CompletableFuture.supplyAsync(() -> gpsUtil.getAttractions(), esThreadPoolRS)
-			.thenAcceptAsync(attractions -> userLocations
+			.thenApply(attractions -> attractions
+				.stream()
+				.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
+				.flatMap(attraction -> userLocations
+					.stream()
+					.filter(userLocation -> nearAttraction(userLocation, attraction))
+					.map(userLocation -> new UserReward(userLocation, attraction)))
+					.toList()
+			)
+			.thenAcceptAsync(userRewards -> userRewards
 				.parallelStream()
-				.forEach(visitedLocation -> attractions
-					.parallelStream()
-					.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
-					.filter(attraction -> nearAttraction(visitedLocation, attraction))
-					.forEach(attraction -> user.addUserReward(new UserReward(visitedLocation, attraction, getRewardPoints(attraction, user))))
-				), esThreadPoolRS);
+				.map(userReward -> userReward
+					.setRewardPoints(this.getRewardPoints(userReward.attraction, user)))
+				.forEach(user::addUserReward)
+			, esThreadPoolRS);
 	}
-	
+
 	public boolean isWithinAttractionProximity(Attraction attraction, Location location) {
 		return getDistance(attraction, location) > attractionProximityRange ? false : true;
 	}

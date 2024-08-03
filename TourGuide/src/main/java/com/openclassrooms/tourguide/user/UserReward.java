@@ -19,8 +19,9 @@ public class UserReward {
 		this.attraction = attraction;
 	}
 
-	public void setRewardPoints(int rewardPoints) {
+	public UserReward setRewardPoints(int rewardPoints) {
 		this.rewardPoints = rewardPoints;
+		return this;
 	}
 	
 	public int getRewardPoints() {

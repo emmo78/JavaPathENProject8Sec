@@ -35,15 +35,14 @@ public class TourGuideService {
 	private final TripPricer tripPricer = new TripPricer();
 	public final Tracker tracker;
 	boolean testMode = true;
-
 	/*
 	 * for Async methods, to run a corresponding execution step in another thread.
 	 * instead the common fork/join pool implementation of Executor
-	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but took about 25 min, 16 succeed !
+	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but fail, 16 was limit, 32 succeed
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
-	private final ExecutorService esThreadPoolTGS = Executors.newFixedThreadPool(16);
+	private final ExecutorService esThreadPoolTGS = Executors.newFixedThreadPool(32);
 
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
 		this.gpsUtil = gpsUtil;
@@ -182,5 +181,4 @@ public class TourGuideService {
 		LocalDateTime localDateTime = LocalDateTime.now().minusDays(new Random().nextInt(30));
 		return Date.from(localDateTime.toInstant(ZoneOffset.UTC));
 	}
-
 }
