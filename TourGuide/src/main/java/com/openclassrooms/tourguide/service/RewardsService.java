@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 import gpsUtil.GpsUtil;
@@ -32,6 +33,7 @@ public class RewardsService {
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
+	@Getter
 	private final ExecutorService esThreadPoolRS = Executors.newFixedThreadPool(256);
 
 	public RewardsService(GpsUtil gpsUtil, RewardCentral rewardCentral) {

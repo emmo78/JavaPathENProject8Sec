@@ -15,6 +15,7 @@ import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -42,6 +43,7 @@ public class TourGuideService {
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
 	 */
+	@Getter
 	private final ExecutorService esThreadPoolTGS = Executors.newFixedThreadPool(32);
 
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {

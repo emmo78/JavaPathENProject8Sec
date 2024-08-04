@@ -71,6 +71,8 @@ public class TestPerformance {
 		// wait for the completion of all theCompletableFutures
 		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
 		allCompletableFutures.join();
+		// finished using it so close Executor Service
+		tourGuideService.getEsThreadPoolTGS().shutdownNow();
 		stopWatch.stop();
 		tourGuideService.tracker.stopTracking();
 
@@ -102,7 +104,8 @@ public class TestPerformance {
 		// wait for the completion of all theCompletableFutures
 		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
 		allCompletableFutures.join();
-
+		// finished using it so close Executor Service
+		rewardsService.getEsThreadPoolRS().shutdownNow();
 		for (User user : allUsers) {
 			assertTrue(user.getUserRewards().size() > 0);
 		}
