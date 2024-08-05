@@ -1,20 +1,20 @@
 package com.openclassrooms.tourguide.service;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import lombok.Getter;
-import org.springframework.stereotype.Service;
-
+import com.openclassrooms.tourguide.user.User;
+import com.openclassrooms.tourguide.user.UserReward;
 import gpsUtil.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.Location;
 import gpsUtil.location.VisitedLocation;
+import lombok.Getter;
+import org.springframework.stereotype.Service;
 import rewardCentral.RewardCentral;
-import com.openclassrooms.tourguide.user.User;
-import com.openclassrooms.tourguide.user.UserReward;
+
+import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Service
 public class RewardsService {
@@ -50,21 +50,21 @@ public class RewardsService {
 	}
 	
 	public CompletableFuture<Void> calculateRewards(User user) {
-		List<VisitedLocation> userLocations = user.getVisitedLocations();
+		List<VisitedLocation> visitedLocations = user.getVisitedLocations();
 		return CompletableFuture.supplyAsync(() -> gpsUtil.getAttractions(), esThreadPoolRS)
 			.thenApply(attractions -> attractions
 				.stream()
 				.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
-				.flatMap(attraction -> userLocations
+				.flatMap(attraction -> visitedLocations
 					.stream()
-					.filter(userLocation -> nearAttraction(userLocation, attraction))
-					.map(userLocation -> new UserReward(userLocation, attraction)))
+					.filter(visitedLocation -> nearAttraction(visitedLocation, attraction))
+					.map(visitedLocation -> new UserReward(visitedLocation, attraction)))
 					.toList()
 			)
 			.thenAcceptAsync(userRewards -> userRewards
 				.parallelStream()
 				.map(userReward -> userReward
-					.setRewardPoints(this.getRewardPoints(userReward.attraction, user)))
+					.setRewardPoints(getRewardPoints(userReward.attraction, user.getUserId())))
 				.forEach(user::addUserReward)
 			, esThreadPoolRS);
 	}
@@ -77,8 +77,8 @@ public class RewardsService {
 		return getDistance(attraction, visitedLocation.location) > proximityBuffer ? false : true;
 	}
 	
-	private int getRewardPoints(Attraction attraction, User user) {
-		return rewardCentral.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
+	int getRewardPoints(Attraction attraction, UUID userId) {
+		return rewardCentral.getAttractionRewardPoints(attraction.attractionId, userId);
 	}
 	
 	public double getDistance(Location loc1, Location loc2) {

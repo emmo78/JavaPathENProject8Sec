@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-07-30T10:26:23.873Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="y4CttAXwtNaN97QiIH2M" version="24.6.4" type="device" pages="4">
+<mxfile host="Electron" modified="2024-08-05T11:48:12.690Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="08uXCQNZO5uMVmo63uD0" version="24.6.4" type="device" pages="4">
   <diagram id="7Isf6xMYXmhKDAAIETeE" name="ClassDiagram">
-    <mxGraphModel dx="4134" dy="3182" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3327" dy="3166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -273,7 +273,7 @@
         <mxCell id="Dky3ktPtLt6OV7a4jQEV-15" value="-&amp;nbsp;nearAttraction(: VisitedLocation, : Attraction): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="Dky3ktPtLt6OV7a4jQEV-1" vertex="1">
           <mxGeometry y="242" width="350" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="Dky3ktPtLt6OV7a4jQEV-16" value="- getRewardPoints(: Attraction, : User): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="Dky3ktPtLt6OV7a4jQEV-1" vertex="1">
+        <mxCell id="Dky3ktPtLt6OV7a4jQEV-16" value="&amp;nbsp; getRewardPoints(: Attraction, : User): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="Dky3ktPtLt6OV7a4jQEV-1" vertex="1">
           <mxGeometry y="268" width="350" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Dky3ktPtLt6OV7a4jQEV-17" value="+ getDistance( : Location, : Location): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="Dky3ktPtLt6OV7a4jQEV-1" vertex="1">
@@ -512,55 +512,55 @@
         <mxCell id="8gsO2OrLuf0_uJUOMDmg-6" value="&lt;span style=&quot;text-align: left&quot;&gt;1&lt;/span&gt;" style="resizable=0;html=1;align=right;verticalAlign=bottom;labelBackgroundColor=none;" parent="8gsO2OrLuf0_uJUOMDmg-4" connectable="0" vertex="1">
           <mxGeometry x="1" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="iCShn9UGwWLJbiZ0tA7b-14" target="iCShn9UGwWLJbiZ0tA7b-14">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="iCShn9UGwWLJbiZ0tA7b-14" target="iCShn9UGwWLJbiZ0tA7b-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-2" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=100;tabHeight=20;tabPosition=left;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" vertex="1" parent="1">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-2" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=100;tabHeight=20;tabPosition=left;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" parent="1" vertex="1">
           <mxGeometry x="-809.9300000000001" y="-1925" width="280" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-3" value="NearbyAttractionDTO" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#000000;" vertex="1" parent="1">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-3" value="NearbyAttractionDTO" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="-797.4300000000001" y="-1895" width="255" height="268" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-4" value="- attraction : Attraction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-4" value="- attraction : Attraction" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="26" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-5" value="- attractionName: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-5" value="- attractionName: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="52" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-6" value="- attractionLongitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-6" value="- attractionLongitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="78" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-7" value="- attractionLatitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-7" value="- attractionLatitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="104" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-8" value="- userLongitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-8" value="- userLongitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="130" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-9" value="- userLatitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-9" value="- userLatitude: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="156" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-10" value="- distanceUserAttractionMiles: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-10" value="- distanceUserAttractionMiles: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="182" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-11" value="- visitingRewardAttractionPoints: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-11" value="- visitingRewardAttractionPoints: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="208" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="234" width="255" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-13" value="+ calculateDistanceUserAttractionMiles(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCShn9UGwWLJbiZ0tA7b-3">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-13" value="+ calculateDistanceUserAttractionMiles(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCShn9UGwWLJbiZ0tA7b-3" vertex="1">
           <mxGeometry y="242" width="255" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-14" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;dto&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-14" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;dto&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="-829.9300000000001" y="-1940" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iCShn9UGwWLJbiZ0tA7b-2" target="iCShn9UGwWLJbiZ0tA7b-2">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="iCShn9UGwWLJbiZ0tA7b-2" target="iCShn9UGwWLJbiZ0tA7b-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-16" value="@JsonIgnore" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-16" value="@JsonIgnore" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=9;verticalAlign=top;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-662.43" y="-1967.16" width="120" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="iCShn9UGwWLJbiZ0tA7b-17" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.471;exitY=0.538;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iCShn9UGwWLJbiZ0tA7b-4" target="iCShn9UGwWLJbiZ0tA7b-16">
+        <mxCell id="iCShn9UGwWLJbiZ0tA7b-17" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.471;exitY=0.538;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="iCShn9UGwWLJbiZ0tA7b-4" target="iCShn9UGwWLJbiZ0tA7b-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-420" y="-1150" as="sourcePoint" />
             <mxPoint x="-370" y="-1200" as="targetPoint" />
@@ -629,7 +629,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="jO4eU9xvz52w8UcFy3oI" name="SequencesAvantCorrection">
-    <mxGraphModel dx="3475" dy="1407" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1912" dy="1125" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -661,10 +661,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3y_e_JfPKqScEm3xkdLF-1" value=": TourGuide Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="1" vertex="1">
-          <mxGeometry x="580" y="80" width="170" height="1250" as="geometry" />
+          <mxGeometry x="580" y="80" width="170" height="1260" as="geometry" />
         </mxCell>
         <mxCell id="kWHM9seay7Nv6cBdbi39-1" value=": User" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="1" vertex="1">
-          <mxGeometry x="980" y="80" width="140" height="1089" as="geometry" />
+          <mxGeometry x="980" y="80" width="140" height="1150" as="geometry" />
         </mxCell>
         <mxCell id="mcWMrAV24YXbyjxrN7hq-4" value=": GpsUtil" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1330" y="80" width="100" height="530" as="geometry" />
@@ -712,15 +712,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SlBzjaVZGignUCG6YoMJ-1" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ trackUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="1" target="3y_e_JfPKqScEm3xkdLF-1" edge="1">
+        <mxCell id="SlBzjaVZGignUCG6YoMJ-1" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ trackUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;entryX=0.503;entryY=0.981;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="3y_e_JfPKqScEm3xkdLF-1" edge="1">
           <mxGeometry x="-0.8683" width="80" relative="1" as="geometry">
             <mxPoint x="665.25" y="385" as="sourcePoint" />
             <mxPoint x="665.25" y="555" as="targetPoint" />
             <Array as="points">
               <mxPoint x="780" y="385" />
               <mxPoint x="780" y="415" />
-              <mxPoint x="780" y="1290" />
-              <mxPoint x="710" y="1290" />
+              <mxPoint x="780" y="1316" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -749,8 +748,8 @@
         </mxCell>
         <mxCell id="0PPmYMMLHea_OIKhsZ1r-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;: VisitedLocation&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="1" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="664.5" y="1328" as="sourcePoint" />
-            <mxPoint x="479.70000000000005" y="1328" as="targetPoint" />
+            <mxPoint x="664.5" y="1340" as="sourcePoint" />
+            <mxPoint x="479.70000000000005" y="1340" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -764,7 +763,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mcWMrAV24YXbyjxrN7hq-1" value="&lt;b&gt;&lt;font color=&quot;#00cc00&quot; style=&quot;font-size: 14px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=170;strokeColor=#00CC00;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="550" y="270" width="1050" height="1030" as="geometry" />
+          <mxGeometry x="550" y="270" width="1050" height="1053" as="geometry" />
         </mxCell>
         <mxCell id="mcWMrAV24YXbyjxrN7hq-2" value="&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#00cc00&quot;&gt;vLs.size() &amp;gt;0&lt;/font&gt;&lt;/b&gt;" style="text;html=1;" parent="mcWMrAV24YXbyjxrN7hq-1" vertex="1">
           <mxGeometry width="100" height="20" relative="1" as="geometry">
@@ -783,7 +782,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3Laio48oQBB4t2HKBh0P-4" value=": VisitedLocation" style="text;whiteSpace=wrap;html=1;" parent="mcWMrAV24YXbyjxrN7hq-1" vertex="1">
-          <mxGeometry x="120" y="990" width="120" height="40" as="geometry" />
+          <mxGeometry x="120" y="1010" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0PPmYMMLHea_OIKhsZ1r-2" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;: VisitedLocation&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="mcWMrAV24YXbyjxrN7hq-1" source="mcWMrAV24YXbyjxrN7hq-4" edge="1">
           <mxGeometry x="-0.0008" relative="1" as="geometry">
@@ -823,6 +822,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="TV1PQoyjDbPuNry58SpR-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;void&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="mcWMrAV24YXbyjxrN7hq-1" edge="1">
+          <mxGeometry x="-0.0207" relative="1" as="geometry">
+            <mxPoint x="500" y="237" as="sourcePoint" />
+            <mxPoint x="230" y="237" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="3y_e_JfPKqScEm3xkdLF-4" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ getUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;entryX=0.5;entryY=0.288;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry x="0.0028" width="80" relative="1" as="geometry">
             <mxPoint x="479.5" y="202" as="sourcePoint" />
@@ -832,15 +839,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3Laio48oQBB4t2HKBh0P-17" value=": RewardsService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="80" width="120" height="929" as="geometry" />
+          <mxGeometry x="1160" y="80" width="120" height="1219" as="geometry" />
         </mxCell>
-        <mxCell id="3Laio48oQBB4t2HKBh0P-18" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;calculateRewards(: User)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="3Laio48oQBB4t2HKBh0P-17" target="3Laio48oQBB4t2HKBh0P-17" edge="1">
+        <mxCell id="3Laio48oQBB4t2HKBh0P-18" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;calculateRewards(: User)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="3Laio48oQBB4t2HKBh0P-17" edge="1">
           <mxGeometry x="-0.0221" y="-1" width="80" relative="1" as="geometry">
-            <mxPoint x="-380" y="439" as="sourcePoint" />
-            <mxPoint x="49.5" y="439" as="targetPoint" />
+            <mxPoint x="-380" y="450" as="sourcePoint" />
+            <mxPoint x="59.5" y="450" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-100" y="439" />
-              <mxPoint x="-20" y="439" />
+              <mxPoint x="-100" y="450" />
+              <mxPoint x="-20" y="450" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -874,6 +881,14 @@
         </mxCell>
         <mxCell id="B8hkxDTUcz8O-GNg3B4U-13" value="&lt;b&gt;count&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;!&lt;/b&gt;&lt;/font&gt;&amp;nbsp;&lt;font color=&quot;#6600cc&quot;&gt;&lt;b&gt;uR&lt;/b&gt;&lt;/font&gt;.attration.name.equals(&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#cc0066&quot;&gt;uR&lt;/font&gt;.&lt;/b&gt;&lt;b&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT)&lt;/font&gt;&lt;/b&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;fillColor=#FFFF00;" parent="B8hkxDTUcz8O-GNg3B4U-12" vertex="1">
           <mxGeometry x="10" y="40" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TV1PQoyjDbPuNry58SpR-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;void&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="TXbnh5lN1TC0BOVGOGAe-9" edge="1">
+          <mxGeometry x="-0.0207" relative="1" as="geometry">
+            <mxPoint x="110" y="400" as="sourcePoint" />
+            <mxPoint x="280.5" y="400" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="3Laio48oQBB4t2HKBh0P-19" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+ getVisitedLocations()&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="1" source="3Laio48oQBB4t2HKBh0P-17" target="kWHM9seay7Nv6cBdbi39-1" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
@@ -1042,13 +1057,15 @@
         <mxCell id="H3amOh4l61oQI2vyIrKS-7" value=": RewardsService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="1" vertex="1">
           <mxGeometry x="1160" y="1440" width="140" height="410" as="geometry" />
         </mxCell>
-        <mxCell id="H3amOh4l61oQI2vyIrKS-8" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;+ isWithinAttractionProximity(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; font-size: 12px; background-color: initial; color: rgb(0, 255, 255);&quot;&gt;aT:&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;,&amp;nbsp; vL.location: Location)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;exitX=0.494;exitY=0.969;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
-          <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
-            <mxPoint x="663.98" y="1818.0500000000002" as="sourcePoint" />
-            <mxPoint x="1229.5" y="1819" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
+        <object label="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;+ isWithinAttractionProximity(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: nowrap; font-size: 12px; background-color: initial; color: rgb(0, 255, 255);&quot;&gt;aT:&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: nowrap;&quot;&gt;,&amp;nbsp; vL.location: Location)&lt;/span&gt;&lt;/div&gt;" id="H3amOh4l61oQI2vyIrKS-8">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;exitX=0.494;exitY=0.969;exitDx=0;exitDy=0;exitPerimeter=0;metaEdit=1;" parent="1" edge="1">
+            <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
+              <mxPoint x="663.98" y="1818.0500000000002" as="sourcePoint" />
+              <mxPoint x="1229.5" y="1819" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
         <mxCell id="hGZRwvuLxQ3mh6Y1-PAT-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;isProx: boolean&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;exitX=0.479;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="H3amOh4l61oQI2vyIrKS-7" target="3Laio48oQBB4t2HKBh0P-5" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
             <mxPoint x="860" y="1850" as="sourcePoint" />
@@ -1057,7 +1074,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M0v1RNj67SFX9tzEYkht-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nearByA:&lt;/font&gt;&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;&amp;nbsp;List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;entryX=0.54;entryY=0.909;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+        <mxCell id="M0v1RNj67SFX9tzEYkht-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nearByA:&lt;/font&gt;&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;&amp;nbsp;List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;entryX=0.5;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="DlCdc-URKGv8_Pe7EUjC-4" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
             <mxPoint x="664.5" y="2029.851" as="sourcePoint" />
             <mxPoint x="484" y="2029.851" as="targetPoint" />
@@ -1073,11 +1090,19 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="TV1PQoyjDbPuNry58SpR-2" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(255, 255, 0);&quot;&gt;void&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="3Laio48oQBB4t2HKBh0P-17" edge="1">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <mxPoint x="1214.8" y="1260" as="sourcePoint" />
+            <mxPoint x="780" y="1300" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="SequencesApresCorrection" id="QYiqrsqA_HO1SlvgEz-U">
-    <mxGraphModel dx="1194" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-0" />
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-1" parent="j5bLr7NAV_4XFp9qxmq4-0" />
@@ -1109,10 +1134,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-7" value=": TourGuide Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="580" y="80" width="170" height="1250" as="geometry" />
+          <mxGeometry x="581" y="80" width="170" height="1260" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-8" value=": User" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="980" y="80" width="140" height="1089" as="geometry" />
+          <mxGeometry x="980" y="80" width="140" height="1160" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-9" value=": GpsUtil" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
           <mxGeometry x="1330" y="80" width="100" height="530" as="geometry" />
@@ -1134,13 +1159,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-12" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="161" y="1441" width="20" height="609" as="geometry" />
+          <mxGeometry x="161" y="1441" width="20" height="719" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-13" value=": User" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
           <mxGeometry x="171" y="1451" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-14" value=": TourGuide Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="430" y="1441" width="100" height="609" as="geometry" />
+          <mxGeometry x="430" y="1441" width="100" height="719" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-15" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+&amp;nbsp;getNearbyAttractions(userName: String)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-12" target="j5bLr7NAV_4XFp9qxmq4-14" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
@@ -1160,32 +1185,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-17" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ trackUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-7" edge="1">
-          <mxGeometry x="-0.8683" width="80" relative="1" as="geometry">
-            <mxPoint x="665.25" y="385" as="sourcePoint" />
-            <mxPoint x="665.25" y="555" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="780" y="385" />
-              <mxPoint x="780" y="415" />
-              <mxPoint x="780" y="470" />
-              <mxPoint x="665" y="470" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-18" value=": TourGuide Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="580" y="1442" width="170" height="588" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-19" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;: User&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-18" target="j5bLr7NAV_4XFp9qxmq4-14" edge="1">
-          <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="85" y="113" as="sourcePoint" />
-            <mxPoint x="-79" y="113" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-20" value="getLocation(: User)" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;fillColor=#B3FF66;" parent="j5bLr7NAV_4XFp9qxmq4-18" vertex="1">
-          <mxGeometry x="15" y="150" width="140" height="31" as="geometry" />
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-18" value=": TourGuide Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="580" y="1442" width="170" height="688" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-21" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;- getUser(userName: String)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;exitX=0.5;exitY=0.185;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.0669" width="80" relative="1" as="geometry">
@@ -1197,8 +1198,8 @@
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-22" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;: VisitedLocation&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="664.5" y="1328" as="sourcePoint" />
-            <mxPoint x="479.70000000000005" y="1328" as="targetPoint" />
+            <mxPoint x="664.5" y="1340" as="sourcePoint" />
+            <mxPoint x="479.70000000000005" y="1340" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -1211,65 +1212,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-24" value="&lt;b&gt;&lt;font color=&quot;#00cc00&quot; style=&quot;font-size: 14px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=170;strokeColor=#00CC00;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="550" y="270" width="1050" height="1030" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-25" value="&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#00cc00&quot;&gt;vLs.size() &amp;gt;0&lt;/font&gt;&lt;/b&gt;" style="text;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry width="100" height="20" relative="1" as="geometry">
-            <mxPoint x="20" y="30" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-26" value="" style="line;strokeWidth=2;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;strokeColor=#00CC00;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry y="81" width="1050" height="10" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-27" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getUserLocation(userId: UUID);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-24" target="j5bLr7NAV_4XFp9qxmq4-9" edge="1">
-          <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
-            <mxPoint x="230" y="150" as="sourcePoint" />
-            <mxPoint x="547" y="150" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-28" value=":&amp;nbsp;CompletableFuture&amp;lt;VisitedLocation&amp;gt;" style="text;whiteSpace=wrap;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry x="20" y="200" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-29" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;: VisitedLocation&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-24" source="j5bLr7NAV_4XFp9qxmq4-9" edge="1">
-          <mxGeometry x="-0.0008" relative="1" as="geometry">
-            <mxPoint x="557" y="180" as="sourcePoint" />
-            <mxPoint x="230" y="180" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint x="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-30" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+ addToVisitedLocations&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;(: VisitedLocation)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-24" target="j5bLr7NAV_4XFp9qxmq4-8" edge="1">
-          <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
-            <mxPoint x="230" y="218" as="sourcePoint" />
-            <mxPoint x="386.5" y="218" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-31" value="&lt;b style=&quot;color: rgb(0, 204, 0);&quot;&gt;vLs.size() &amp;lt;=0&lt;/b&gt;" style="text;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry width="100" height="20" relative="1" as="geometry">
-            <mxPoint x="20" y="90" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-32" value="&lt;font color=&quot;#007fff&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[vL: VisitedLocation in vLs:]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#007FFF;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry x="300" y="350" width="740" height="670" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-33" value="&lt;font color=&quot;#0000cc&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[aT: Attraction in aTs: ]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#0000CC;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-24" vertex="1">
-          <mxGeometry x="310" y="390" width="720" height="620" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-35" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;vLs: List&amp;lt;VisitedLocation&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-24" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
-          <mxGeometry x="-0.0207" relative="1" as="geometry">
-            <mxPoint x="500.3800000000001" y="300" as="sourcePoint" />
-            <mxPoint x="669.6300000000001" y="300" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="jOIKmAB8NBFwSOvF9HJq-2" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;join&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;(&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;) : Visited Location&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" vertex="1" parent="j5bLr7NAV_4XFp9qxmq4-24">
-          <mxGeometry x="50" y="260" width="140" height="40" as="geometry" />
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-24" value="&lt;b&gt;&lt;font color=&quot;#00cc00&quot; style=&quot;font-size: 14px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=170;strokeColor=#00CC00;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="520" y="270" width="1080" height="1040" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-36" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ getUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;entryX=0.5;entryY=0.288;entryDx=0;entryDy=0;entryPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.0028" width="80" relative="1" as="geometry">
@@ -1279,40 +1223,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-37" value=": RewardsService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="1160" y="80" width="120" height="929" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-38" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;calculateRewards(: User)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-37" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
-          <mxGeometry x="-0.0221" y="-1" width="80" relative="1" as="geometry">
-            <mxPoint x="-380" y="439" as="sourcePoint" />
-            <mxPoint x="49.5" y="439" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-100" y="439" />
-              <mxPoint x="-20" y="439" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-40" value="&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt; [uRs.containsKey(&lt;/font&gt;&lt;b style=&quot;color: rgb(0, 0, 204);&quot;&gt;aT&lt;/b&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;.name) == false]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=240;strokeColor=#00CC00;strokeWidth=2;height=30;" parent="j5bLr7NAV_4XFp9qxmq4-37" vertex="1">
-          <mxGeometry x="-230" y="700" width="640" height="490" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-41" value="isNear: boolean" style="text;whiteSpace=wrap;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-40" vertex="1">
-          <mxGeometry x="306" y="20" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-42" value="&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt; [isNear == true]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#00CC00;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-37" vertex="1">
-          <mxGeometry x="-220" y="750" width="620" height="430" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-43" value="rP: int" style="text;whiteSpace=wrap;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-42" vertex="1">
-          <mxGeometry x="300" y="68" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-44" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#cc0066&quot;&gt;&lt;b&gt;uR&lt;/b&gt; &lt;/font&gt;: new UserReward&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;(&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;vL:&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;,&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT:&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;, rP)&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-42" vertex="1">
-          <mxGeometry x="210" y="108" width="140" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-46" value="&lt;font color=&quot;#00cc00&quot;&gt;&lt;b&gt;alt&lt;/b&gt;&amp;nbsp;[userRewardss.containsKey(&lt;/font&gt;&lt;b style=&quot;color: rgb(204, 0, 102);&quot;&gt;uR&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 204, 0);&quot;&gt;.&lt;/span&gt;&lt;b style=&quot;color: rgb(0, 0, 204);&quot;&gt;aT&lt;/b&gt;&lt;font color=&quot;#00cc00&quot;&gt;.name) == false]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=330;strokeColor=#00CC00;strokeWidth=2;height=30;" parent="j5bLr7NAV_4XFp9qxmq4-42" vertex="1">
-          <mxGeometry x="30" y="270" width="350" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-47" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;- userRewards.put(&lt;/span&gt;&lt;b style=&quot;background-color: initial; color: rgb(204, 0, 102);&quot;&gt;uR&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;.&lt;/b&gt;&lt;b style=&quot;background-color: initial; color: rgb(0, 0, 204);&quot;&gt;aT&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;.name&lt;/b&gt;&lt;font style=&quot;background-color: initial;&quot; color=&quot;#00cc00&quot;&gt;,&amp;nbsp;&lt;/font&gt;&lt;b style=&quot;background-color: initial; color: rgb(102, 0, 204);&quot;&gt;uR&lt;/b&gt;&lt;span style=&quot;text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-46" vertex="1">
-          <mxGeometry x="10" y="59" width="220" height="40" as="geometry" />
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-37" value=": RewardsService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1154" y="80" width="140" height="1090" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-49" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+ getVisitedLocations()&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" target="j5bLr7NAV_4XFp9qxmq4-8" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
@@ -1325,20 +1237,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-50" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractions();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-50" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractions();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
             <mxPoint x="1209.5" y="586" as="sourcePoint" />
             <mxPoint x="1379.5" y="586" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-51" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;aTs: List&amp;lt;Attraction&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-9" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
-          <mxGeometry x="-0.0008" relative="1" as="geometry">
-            <mxPoint x="1390" y="460" as="sourcePoint" />
-            <mxPoint x="790" y="460" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-52" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;vLs: List&amp;lt;VisitedLocation&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-8" edge="1">
@@ -1349,65 +1253,67 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-53" value="&lt;div style=&quot;text-align: left; font-size: 12px;&quot;&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;-&amp;nbsp;nearAttraction(&lt;/span&gt;&lt;span style=&quot;text-align: center; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;vL:&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT:&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-53" value="&lt;div style=&quot;text-align: left; font-size: 12px;&quot;&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;-&amp;nbsp;nearAttraction(&lt;/span&gt;&lt;span style=&quot;text-align: center; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;vL:&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT:&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="-0.4284" width="80" relative="1" as="geometry">
-            <mxPoint x="1240" y="800" as="sourcePoint" />
-            <mxPoint x="1230" y="820" as="targetPoint" />
+            <mxPoint x="1223.5" y="812" as="sourcePoint" />
+            <mxPoint x="1223.5" y="832" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1360" y="799" />
-              <mxPoint x="1360" y="819" />
+              <mxPoint x="1360" y="812" />
+              <mxPoint x="1360" y="832" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-54" value=": RewardCentral" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="1470" y="80" width="100" height="830" as="geometry" />
+          <mxGeometry x="1470" y="80" width="100" height="1004" as="geometry" />
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-55" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractionRewardPoints()&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-55" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractionRewardPoints()&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.0031" width="80" relative="1" as="geometry">
-            <mxPoint x="1361" y="894" as="sourcePoint" />
-            <mxPoint x="1519.5" y="894" as="targetPoint" />
+            <mxPoint x="1361" y="1068" as="sourcePoint" />
+            <mxPoint x="1519.5" y="1068" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-56" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;: int&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
-          <mxGeometry x="-0.0008" relative="1" as="geometry">
-            <mxPoint x="1519.5" y="914" as="sourcePoint" />
-            <mxPoint x="1360" y="914" as="targetPoint" />
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-56" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;&lt;b&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;: int&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;dashed=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="-0.0094" relative="1" as="geometry">
+            <mxPoint x="1519.5" y="1085" as="sourcePoint" />
+            <mxPoint x="1360" y="1085" as="targetPoint" />
             <Array as="points" />
-            <mxPoint x="1" as="offset" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-57" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;getUserRewards()&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" target="j5bLr7NAV_4XFp9qxmq4-8" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-57" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;getUserRewards()&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
-            <mxPoint x="1210" y="680" as="sourcePoint" />
-            <mxPoint x="1030" y="679.5" as="targetPoint" />
+            <mxPoint x="1223.5" y="703" as="sourcePoint" />
+            <mxPoint x="1049.5" y="703" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1135" y="679" />
-              <mxPoint x="1080" y="679" />
+              <mxPoint x="1135" y="703" />
+              <mxPoint x="1080" y="703" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-58" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;addUserReward&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; color: rgb(204, 0, 102); font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;uR&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-58" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;addUserReward&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; color: rgb(204, 0, 102); font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;uR&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.004" width="80" relative="1" as="geometry">
-            <mxPoint x="1214.5" y="1011" as="sourcePoint" />
-            <mxPoint x="1050" y="1010" as="targetPoint" />
+            <mxPoint x="1223.5" y="1166" as="sourcePoint" />
+            <mxPoint x="1050" y="1166" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-59" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;- getRewardPoints(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;:&lt;/font&gt;, : User)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-37" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
-          <mxGeometry x="-0.5478" width="80" relative="1" as="geometry">
-            <mxPoint x="1230" y="876" as="sourcePoint" />
-            <mxPoint x="1214.5" y="926" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1360" y="876" />
-              <mxPoint x="1360" y="920" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
+        <object label="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;getRewardPoints(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;:&lt;/font&gt;, : User)&lt;/span&gt;&lt;/div&gt;" id="j5bLr7NAV_4XFp9qxmq4-59">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;metaEdit=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+            <mxGeometry x="-0.5478" width="80" relative="1" as="geometry">
+              <mxPoint x="1223.5" y="1052" as="sourcePoint" />
+              <mxPoint x="1223.5" y="1096" as="targetPoint" />
+              <Array as="points">
+                <mxPoint x="1360" y="1052" />
+                <mxPoint x="1360" y="1096" />
+              </Array>
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-60" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+ getVisitedLocations()&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-7" target="j5bLr7NAV_4XFp9qxmq4-8" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
             <mxPoint x="764.5" y="220" as="sourcePoint" />
@@ -1419,10 +1325,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-61" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;uRs: Map&amp;lt;String, UserReward&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-61" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;uRs: Map&amp;lt;String, UserReward&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="-0.0207" relative="1" as="geometry">
-            <mxPoint x="1049.5" y="700" as="sourcePoint" />
-            <mxPoint x="1210" y="700" as="targetPoint" />
+            <mxPoint x="1049.5" y="726" as="sourcePoint" />
+            <mxPoint x="1223.5" y="726" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -1451,71 +1357,262 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-65" value=": GpsUtil" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="1330" y="1441" width="145" height="309" as="geometry" />
+          <mxGeometry x="923" y="1441" width="110" height="279" as="geometry" />
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-66" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractions();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;exitX=0.506;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-66" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractions();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;exitX=0.506;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-65" edge="1">
           <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
-            <mxPoint x="666.02" y="1707.98" as="sourcePoint" />
-            <mxPoint x="1402" y="1707.98" as="targetPoint" />
+            <mxPoint x="666.02" y="1694.98" as="sourcePoint" />
+            <mxPoint x="1070" y="1695" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-67" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;aTs: List&amp;lt;Attraction&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;exitX=0.503;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-65" target="j5bLr7NAV_4XFp9qxmq4-18" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-67" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;aTs: List&amp;lt;Attraction&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-65" edge="1">
           <mxGeometry x="-0.0008" relative="1" as="geometry">
-            <mxPoint x="1390" y="1522" as="sourcePoint" />
-            <mxPoint x="1240" y="1522" as="targetPoint" />
+            <mxPoint x="1050" y="1720" as="sourcePoint" />
+            <mxPoint x="664.5" y="1720" as="targetPoint" />
             <Array as="points" />
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-68" value="&lt;font color=&quot;#0000cc&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[aT: Attraction in aTs: ]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#0000CC;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="500" y="1770" width="750" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-69" value="&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt; [isProx == true]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#00CC00;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-68" vertex="1">
-          <mxGeometry x="13" y="110" width="257" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-70" value="&lt;div style=&quot;&quot;&gt;nearByA&lt;span style=&quot;text-align: left; text-wrap: nowrap; background-color: initial;&quot;&gt;: List&amp;lt;Attraction&amp;gt;&lt;br&gt;add&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-69" vertex="1">
-          <mxGeometry x="87" y="41" width="140" height="39" as="geometry" />
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-68" value="&lt;font color=&quot;#0000cc&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[aT: Attraction in aTs: ]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=160;strokeColor=#0000CC;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="500" y="1800" width="730" height="300" as="geometry" />
         </mxCell>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-71" value=": RewardsService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
-          <mxGeometry x="1160" y="1440" width="140" height="410" as="geometry" />
+          <mxGeometry x="1251" y="1441" width="140" height="559" as="geometry" />
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-72" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;+ isWithinAttractionProximity(&lt;/span&gt;&lt;b style=&quot;text-align: center; text-wrap: wrap; font-size: 12px; background-color: initial; color: rgb(0, 255, 255);&quot;&gt;aT:&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;,&amp;nbsp; vL.location: Location)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;exitX=0.494;exitY=0.969;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
-          <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
-            <mxPoint x="663.98" y="1818.0500000000002" as="sourcePoint" />
-            <mxPoint x="1229.5" y="1819" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-73" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;isProx: boolean&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;exitX=0.479;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-71" target="j5bLr7NAV_4XFp9qxmq4-18" edge="1">
-          <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="860" y="1850" as="sourcePoint" />
-            <mxPoint x="674.5" y="1850" as="targetPoint" />
-            <Array as="points" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
+        <object label="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;text-wrap: wrap; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;getRewardPoints(&lt;/span&gt;&lt;b style=&quot;text-wrap: wrap; text-align: center; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;:&lt;/font&gt;, : User)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" id="j5bLr7NAV_4XFp9qxmq4-72">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;metaEdit=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+            <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
+              <mxPoint x="664.5" y="1959" as="sourcePoint" />
+              <mxPoint x="1320" y="1959" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="&lt;b style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap: nowrap; background-color: rgb(251, 251, 251);&quot;&gt;: int&lt;/span&gt;" id="j5bLr7NAV_4XFp9qxmq4-73">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;strokeWidth=2;metaEdit=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+            <mxGeometry x="0.2" relative="1" as="geometry">
+              <mxPoint x="1320" y="2000" as="sourcePoint" />
+              <mxPoint x="664.5" y="2000" as="targetPoint" />
+              <Array as="points" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-74" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nearByA:&lt;/font&gt;&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;&amp;nbsp;List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;entryX=0.54;entryY=0.909;entryDx=0;entryDy=0;entryPerimeter=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="664.5" y="2029.851" as="sourcePoint" />
-            <mxPoint x="484" y="2029.851" as="targetPoint" />
+            <mxPoint x="660.5" y="2128.001" as="sourcePoint" />
+            <mxPoint x="480" y="2128.001" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j5bLr7NAV_4XFp9qxmq4-75" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nearByA:&lt;/font&gt;&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;&amp;nbsp;List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-12" edge="1">
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-75" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nearByA:&lt;/font&gt;&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;&amp;nbsp;List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint x="480.5" y="2050.001" as="sourcePoint" />
-            <mxPoint x="180" y="2050" as="targetPoint" />
+            <mxPoint x="480" y="2159.001" as="sourcePoint" />
+            <mxPoint x="170" y="2159.001" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jOIKmAB8NBFwSOvF9HJq-0" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="780" y="520" as="sourcePoint" />
-            <mxPoint x="780" y="470" as="targetPoint" />
+        <mxCell id="I5w_PeHmhOwV-Uco0Jup-0" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;: VisitedLocation&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#B85450;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-9" target="jOIKmAB8NBFwSOvF9HJq-2" edge="1">
+          <mxGeometry x="-0.0008" relative="1" as="geometry">
+            <mxPoint x="1379" y="524" as="sourcePoint" />
+            <mxPoint x="850" y="520" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-32" value="&lt;font color=&quot;#007fff&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[vL: VisitedLocation in vLs:]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;strokeColor=#007FFF;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="960" y="794" width="420" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-38" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;calculateRewards(: User)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="-0.0221" y="-1" width="80" relative="1" as="geometry">
+            <mxPoint x="780" y="487" as="sourcePoint" />
+            <mxPoint x="1223.5" y="487" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1054" y="487" />
+              <mxPoint x="1134" y="487" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-41" value="isNear: boolean" style="text;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1250" y="826" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-42" value="&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt; [isNear == true]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=160;strokeColor=#00CC00;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="980" y="862" width="380" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="T3MqlKHIQEheClHjr2MS-8" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;aTs: List&amp;lt;Attraction&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#B85450;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+          <mxGeometry x="-0.0008" relative="1" as="geometry">
+            <mxPoint x="1379.5" y="608.3199999999999" as="sourcePoint" />
+            <mxPoint x="1219.94" y="608.3199999999999" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-25" value="&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#00cc00&quot;&gt;vLs.size() &amp;gt;0&lt;/font&gt;&lt;/b&gt;" style="text;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="570" y="300" width="100" height="20" as="geometry">
+            <mxPoint x="20" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-26" value="" style="line;strokeWidth=2;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;strokeColor=#00CC00;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="520" y="351" width="1080" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-27" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getUserLocation(userId: UUID);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-9" edge="1">
+          <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
+            <mxPoint x="780" y="420" as="sourcePoint" />
+            <mxPoint x="1097" y="420" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-30" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+ addToVisitedLocations&lt;/span&gt;&lt;span style=&quot;text-align: center; font-size: 12px;&quot;&gt;(: VisitedLocation)&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="0.0036" width="80" relative="1" as="geometry">
+            <mxPoint x="780" y="444" as="sourcePoint" />
+            <mxPoint x="1049.5" y="444" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-31" value="&lt;b style=&quot;color: rgb(0, 204, 0);&quot;&gt;vLs.size() &amp;lt;=0&lt;/b&gt;" style="text;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="570" y="360" width="100" height="20" as="geometry">
+            <mxPoint x="20" y="90" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-33" value="&lt;font color=&quot;#0000cc&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[aT: Attraction in aTs: ]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=160;strokeColor=#0000CC;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="880" y="674" width="520" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-35" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;vLs: List&amp;lt;VisitedLocation&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-37" edge="1">
+          <mxGeometry x="-0.0207" relative="1" as="geometry">
+            <mxPoint x="1050.38" y="570" as="sourcePoint" />
+            <mxPoint x="1219.63" y="570" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jOIKmAB8NBFwSOvF9HJq-2" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;join&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;(&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;) : Visited Location&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="611" y="510" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M-wrh3ggkfEG82FgQe19-0" value="&lt;span style=&quot;font-size: 12px; text-align: left; background-color: rgb(251, 251, 251);&quot;&gt;+ trackUserLocation(: User)&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;edgeStyle=orthogonalEdgeStyle;" parent="j5bLr7NAV_4XFp9qxmq4-1" target="j5bLr7NAV_4XFp9qxmq4-7" edge="1">
+          <mxGeometry x="-0.6566" width="80" relative="1" as="geometry">
+            <mxPoint x="665" y="400" as="sourcePoint" />
+            <mxPoint x="664.5" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="781" y="400" />
+              <mxPoint x="781" y="500" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-40" value="&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;alt&lt;/font&gt;&lt;/b&gt; [uRs.containsKey(&lt;/font&gt;&lt;b style=&quot;color: rgb(0, 0, 204);&quot;&gt;aT&lt;/b&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#00cc00&quot;&gt;.name) == false]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=240;strokeColor=#00CC00;strokeWidth=2;height=30;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="930" y="744" width="460" height="246" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-43" value="&lt;b style=&quot;text-align: center; text-wrap: nowrap;&quot;&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;: int" style="text;whiteSpace=wrap;html=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1268" y="1070" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-46" value="&lt;font color=&quot;#00cc00&quot;&gt;&lt;b&gt;alt&lt;/b&gt;&amp;nbsp;[userRewardss.containsKey(&lt;/font&gt;&lt;b style=&quot;color: rgb(204, 0, 102);&quot;&gt;uR&lt;/b&gt;&lt;b&gt;.&lt;/b&gt;&lt;b style=&quot;color: rgb(0, 0, 204);&quot;&gt;aT&lt;/b&gt;&lt;b&gt;.&lt;/b&gt;&lt;font color=&quot;#00cc00&quot;&gt;name) == false]&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=330;strokeColor=#00CC00;strokeWidth=2;height=30;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="918" y="1180" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-47" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;- userRewards.put(&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(204, 0, 102);&quot;&gt;uR&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(0, 0, 204);&quot;&gt;aT&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;.name&lt;/span&gt;&lt;font style=&quot;background-color: initial;&quot; color=&quot;#00cc00&quot;&gt;,&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial; color: rgb(102, 0, 204);&quot;&gt;uR&lt;/span&gt;&lt;span style=&quot;text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-46" vertex="1">
+          <mxGeometry x="22" y="45" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SS3RjaR3uI_onZLhXILn-0" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#cc0066&quot;&gt;&lt;b&gt;uR&lt;/b&gt; &lt;/font&gt;: new UserReward&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;(&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;vL:&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;,&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#0000cc&quot;&gt;aT&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;)&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1152.5" y="873" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-0" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;void&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="-0.0207" relative="1" as="geometry">
+            <mxPoint x="1050" y="462" as="sourcePoint" />
+            <mxPoint x="780" y="462" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-1" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#cc0066&quot;&gt;uRs&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;: new&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;List&amp;lt;UserReward&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1154" y="620" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-2" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; color: rgb(204, 0, 102);&quot;&gt;uRs.&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;add(&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-weight: bold;&quot; color=&quot;#cc0066&quot;&gt;uR&lt;/font&gt;)&lt;/span&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1152.5" y="930" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-3" value="&lt;font color=&quot;#cc0066&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;loop&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;[uR in uRs: ]&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=160;strokeColor=#CC0066;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="880" y="1009" width="520" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-5" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;span style=&quot;background-color: initial; color: rgb(204, 0, 102);&quot;&gt;uR.&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;setRewardPoints(&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1154" y="1110" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-8" value=": NearbyAttractionDTO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="1080" y="1440" width="140" height="420" as="geometry" />
+        </mxCell>
+        <object label="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;+ builder(&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" id="udoOb8QQJJ-KigdsfAJG-1">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;metaEdit=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" source="j5bLr7NAV_4XFp9qxmq4-18" edge="1">
+            <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
+              <mxPoint x="715.24" y="1820" as="sourcePoint" />
+              <mxPoint x="1150" y="1820" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="udoOb8QQJJ-KigdsfAJG-2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;nAD: nearbyAttractionDTO&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="0.2011" relative="1" as="geometry">
+            <mxPoint x="1150" y="1840" as="sourcePoint" />
+            <mxPoint x="665" y="1840" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;+ calculateDistanceUserAttrationMiles(&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" id="udoOb8QQJJ-KigdsfAJG-3">
+          <mxCell style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;metaEdit=0;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+            <mxGeometry x="-0.0204" y="-1" width="80" relative="1" as="geometry">
+              <mxPoint x="664.5" y="1859" as="sourcePoint" />
+              <mxPoint x="1150" y="1859" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-19" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;: User&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <mxPoint x="665" y="1551" as="sourcePoint" />
+            <mxPoint x="479.5" y="1551" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-20" value="getLocation(: User)" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;fillColor=#B3FF66;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="595" y="1592" width="140" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="WMCkUrXFb4Zo60hs9Ub9-7" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;nearByA&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;: new&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap; text-align: left;&quot;&gt;: List&amp;lt;NearbyAttrationDTO&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;text-wrap: nowrap; background-color: initial; text-align: left;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="571" y="1734" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="udoOb8QQJJ-KigdsfAJG-5" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;sort from min to max distance&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="590" y="1870" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="udoOb8QQJJ-KigdsfAJG-6" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;limit 5&lt;/b&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="590" y="1919" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="j5bLr7NAV_4XFp9qxmq4-70" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;nearByA.&lt;/b&gt;&lt;span style=&quot;text-align: left; text-wrap: nowrap; background-color: initial;&quot;&gt;add(nAD)&lt;/span&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="595" y="2050" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="udoOb8QQJJ-KigdsfAJG-8" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;nAD.&lt;/b&gt;setVisitingRewardAttractionPoints(&lt;b&gt;rP&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
+          <mxGeometry x="544" y="2016" width="244" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lgy2kw4KHti_K7ADEQme-0" value=": RewardCentral" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+          <mxGeometry x="1430" y="1441" width="100" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="lgy2kw4KHti_K7ADEQme-1" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractionRewardPoints()&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+          <mxGeometry x="0.0031" width="80" relative="1" as="geometry">
+            <mxPoint x="1322" y="1972" as="sourcePoint" />
+            <mxPoint x="1480.5" y="1972" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lgy2kw4KHti_K7ADEQme-2" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;&lt;b&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;: int&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;dashed=1;" edge="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+          <mxGeometry x="-0.0094" relative="1" as="geometry">
+            <mxPoint x="1480.5" y="1989" as="sourcePoint" />
+            <mxPoint x="1321" y="1989" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>

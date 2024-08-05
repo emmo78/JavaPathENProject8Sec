@@ -5,6 +5,15 @@ import com.openclassrooms.tourguide.helper.InternalTestHelper;
 import com.openclassrooms.tourguide.tracker.Tracker;
 import com.openclassrooms.tourguide.user.User;
 import com.openclassrooms.tourguide.user.UserReward;
+import gpsUtil.GpsUtil;
+import gpsUtil.location.Location;
+import gpsUtil.location.VisitedLocation;
+import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import tripPricer.Provider;
+import tripPricer.TripPricer;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -14,19 +23,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import lombok.Getter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
-import gpsUtil.GpsUtil;
-import gpsUtil.location.Location;
-import gpsUtil.location.VisitedLocation;
-
-import rewardCentral.RewardCentral;
-import tripPricer.Provider;
-import tripPricer.TripPricer;
 
 @Service
 public class TourGuideService {
@@ -98,18 +94,17 @@ public class TourGuideService {
 	}
 
 	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
-		CompletableFuture<VisitedLocation> cfUserLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
+		CompletableFuture<VisitedLocation> cfVisitedLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
 		//Execute async the rewards calculation so user don't wait for result
 		//Return a CompletableFuture<Void>
-		cfUserLocation.thenComposeAsync(uL -> {
+		cfVisitedLocation.thenComposeAsync(uL -> {
 				user.addToVisitedLocations(uL);
 				return rewardsService.calculateRewards(user);
 			}, esThreadPoolTGS);
-		return cfUserLocation;
+		return cfVisitedLocation;
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
-		RewardCentral rewardCentral = new RewardCentral();
 		List<NearbyAttractionDTO> fiveClosestAttractions = gpsUtil.getAttractions()
 				.parallelStream()
 				.map(attraction ->  NearbyAttractionDTO.builder()
@@ -124,7 +119,7 @@ public class TourGuideService {
 				.sorted((nAD1, nAD2) -> nAD1.getDistanceUserAttractionMiles() > nAD2.getDistanceUserAttractionMiles() ? 1 : -1)
 				.limit(5)
 				.peek(nAD -> nAD.setVisitingRewardAttractionPoints(
-						rewardCentral.getAttractionRewardPoints(nAD.getAttraction().attractionId, visitedLocation.userId)))
+						rewardsService.getRewardPoints(nAD.getAttraction(), visitedLocation.userId)))
 				.toList();
 		return fiveClosestAttractions;
 	}
