@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-08-05T11:48:12.690Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="08uXCQNZO5uMVmo63uD0" version="24.6.4" type="device" pages="4">
+<mxfile host="Electron" modified="2024-08-06T16:28:38.104Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="Afj9TokCAgDJ21cL7jXz" version="24.6.4" type="device" pages="4">
   <diagram id="7Isf6xMYXmhKDAAIETeE" name="ClassDiagram">
     <mxGraphModel dx="3327" dy="3166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1102,7 +1102,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="SequencesApresCorrection" id="QYiqrsqA_HO1SlvgEz-U">
-    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1912" dy="1125" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-0" />
         <mxCell id="j5bLr7NAV_4XFp9qxmq4-1" parent="j5bLr7NAV_4XFp9qxmq4-0" />
@@ -1596,10 +1596,10 @@
         <mxCell id="udoOb8QQJJ-KigdsfAJG-8" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;nAD.&lt;/b&gt;setVisitingRewardAttractionPoints(&lt;b&gt;rP&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
           <mxGeometry x="544" y="2016" width="244" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="lgy2kw4KHti_K7ADEQme-0" value=": RewardCentral" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+        <mxCell id="lgy2kw4KHti_K7ADEQme-0" value=": RewardCentral" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" parent="j5bLr7NAV_4XFp9qxmq4-1" vertex="1">
           <mxGeometry x="1430" y="1441" width="100" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="lgy2kw4KHti_K7ADEQme-1" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractionRewardPoints()&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+        <mxCell id="lgy2kw4KHti_K7ADEQme-1" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;getAttractionRewardPoints()&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;rounded=0;endFill=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="0.0031" width="80" relative="1" as="geometry">
             <mxPoint x="1322" y="1972" as="sourcePoint" />
             <mxPoint x="1480.5" y="1972" as="targetPoint" />
@@ -1607,7 +1607,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lgy2kw4KHti_K7ADEQme-2" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;&lt;b&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;: int&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;dashed=1;" edge="1" parent="j5bLr7NAV_4XFp9qxmq4-1">
+        <mxCell id="lgy2kw4KHti_K7ADEQme-2" value="&lt;font style=&quot;font-size: 12px; background-color: rgb(248, 206, 204);&quot;&gt;&lt;b&gt;&lt;font color=&quot;#ff00ff&quot;&gt;rp&lt;/font&gt;&lt;/b&gt;: int&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;dashed=1;" parent="j5bLr7NAV_4XFp9qxmq4-1" edge="1">
           <mxGeometry x="-0.0094" relative="1" as="geometry">
             <mxPoint x="1480.5" y="1989" as="sourcePoint" />
             <mxPoint x="1321" y="1989" as="targetPoint" />

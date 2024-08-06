@@ -97,8 +97,8 @@ public class TourGuideService {
 		CompletableFuture<VisitedLocation> cfVisitedLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
 		//Execute async the rewards calculation so user don't wait for result
 		//Return a CompletableFuture<Void>
-		cfVisitedLocation.thenComposeAsync(uL -> {
-				user.addToVisitedLocations(uL);
+		cfVisitedLocation.thenComposeAsync(vL -> {
+				user.addToVisitedLocations(vL);
 				return rewardsService.calculateRewards(user);
 			}, esThreadPoolTGS);
 		return cfVisitedLocation;

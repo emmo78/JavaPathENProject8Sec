@@ -52,16 +52,14 @@ public class RewardsService {
 	public CompletableFuture<Void> calculateRewards(User user) {
 		List<VisitedLocation> visitedLocations = user.getVisitedLocations();
 		return CompletableFuture.supplyAsync(() -> gpsUtil.getAttractions(), esThreadPoolRS)
-			.thenApply(attractions -> attractions
+			.thenAcceptAsync(attractions -> attractions
 				.stream()
 				.filter(attraction -> !user.getUserRewards().containsKey(attraction.attractionName))
 				.flatMap(attraction -> visitedLocations
 					.stream()
 					.filter(visitedLocation -> nearAttraction(visitedLocation, attraction))
 					.map(visitedLocation -> new UserReward(visitedLocation, attraction)))
-					.toList()
-			)
-			.thenAcceptAsync(userRewards -> userRewards
+				.toList()
 				.parallelStream()
 				.map(userReward -> userReward
 					.setRewardPoints(getRewardPoints(userReward.attraction, user.getUserId())))
