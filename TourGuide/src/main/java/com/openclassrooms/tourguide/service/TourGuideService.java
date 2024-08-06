@@ -5,24 +5,24 @@ import com.openclassrooms.tourguide.helper.InternalTestHelper;
 import com.openclassrooms.tourguide.tracker.Tracker;
 import com.openclassrooms.tourguide.user.User;
 import com.openclassrooms.tourguide.user.UserReward;
+import gpsUtil.GpsUtil;
+import gpsUtil.location.Location;
+import gpsUtil.location.VisitedLocation;
+import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import tripPricer.Provider;
+import tripPricer.TripPricer;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
-import gpsUtil.GpsUtil;
-import gpsUtil.location.Location;
-import gpsUtil.location.VisitedLocation;
-
-import rewardCentral.RewardCentral;
-import tripPricer.Provider;
-import tripPricer.TripPricer;
 
 @Service
 public class TourGuideService {
@@ -32,6 +32,15 @@ public class TourGuideService {
 	private final TripPricer tripPricer = new TripPricer();
 	public final Tracker tracker;
 	boolean testMode = true;
+	/*
+	 * for Async methods, to run a corresponding execution step in another thread.
+	 * instead the common fork/join pool implementation of Executor
+	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but fail, 16 was limit, 32 succeed
+	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
+	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
+	 */
+	@Getter
+	private final ExecutorService esThreadPoolTGS = Executors.newFixedThreadPool(32);
 
 	public TourGuideService(GpsUtil gpsUtil, RewardsService rewardsService) {
 		this.gpsUtil = gpsUtil;
@@ -54,8 +63,10 @@ public class TourGuideService {
 	}
 
 	public VisitedLocation getUserLocation(User user) {
-		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ? user.getLastVisitedLocation()
-				: trackUserLocation(user);
+		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
+				user.getLastVisitedLocation()
+				//Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
+				: trackUserLocation(user).join();
 		return visitedLocation;
 	}
 
@@ -82,15 +93,18 @@ public class TourGuideService {
 		return providers;
 	}
 
-	public VisitedLocation trackUserLocation(User user) {
-		VisitedLocation visitedLocation = gpsUtil.getUserLocation(user.getUserId());
-		user.addToVisitedLocations(visitedLocation);
-		rewardsService.calculateRewards(user);
-		return visitedLocation;
+	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
+		CompletableFuture<VisitedLocation> cfVisitedLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
+		//Execute async the rewards calculation so user don't wait for result
+		//Return a CompletableFuture<Void>
+		cfVisitedLocation.thenComposeAsync(vL -> {
+				user.addToVisitedLocations(vL);
+				return rewardsService.calculateRewards(user);
+			}, esThreadPoolTGS);
+		return cfVisitedLocation;
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
-		RewardCentral rewardCentral = new RewardCentral();
 		List<NearbyAttractionDTO> fiveClosestAttractions = gpsUtil.getAttractions()
 				.parallelStream()
 				.map(attraction ->  NearbyAttractionDTO.builder()
@@ -105,7 +119,7 @@ public class TourGuideService {
 				.sorted((nAD1, nAD2) -> nAD1.getDistanceUserAttractionMiles() > nAD2.getDistanceUserAttractionMiles() ? 1 : -1)
 				.limit(5)
 				.peek(nAD -> nAD.setVisitingRewardAttractionPoints(
-						rewardCentral.getAttractionRewardPoints(nAD.getAttraction().attractionId, visitedLocation.userId)))
+						rewardsService.getRewardPoints(nAD.getAttraction(), visitedLocation.userId)))
 				.toList();
 		return fiveClosestAttractions;
 	}
@@ -164,5 +178,4 @@ public class TourGuideService {
 		LocalDateTime localDateTime = LocalDateTime.now().minusDays(new Random().nextInt(30));
 		return Date.from(localDateTime.toInstant(ZoneOffset.UTC));
 	}
-
 }
