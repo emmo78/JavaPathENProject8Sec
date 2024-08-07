@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.openclassrooms.tourguide.service.RewardsService;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 @Getter

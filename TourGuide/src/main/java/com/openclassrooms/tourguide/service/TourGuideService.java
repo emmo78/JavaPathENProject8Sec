@@ -65,7 +65,12 @@ public class TourGuideService {
 	public VisitedLocation getUserLocation(User user) {
 		VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
 				user.getLastVisitedLocation()
-				//Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
+				 /*
+				  * Returns the result value when complete, or throws an (unchecked) exception if completed exceptionally.
+				  * But you can use for example : .get(15, TimeUnit.MINUTES) to wait if necessary for at most the given time
+				  * for this future to complete, and then returns its result, if available.
+				  * throws InterruptedException, ExecutionException, TimeoutException
+				  */
 				: trackUserLocation(user).join();
 		return visitedLocation;
 	}
@@ -95,12 +100,16 @@ public class TourGuideService {
 
 	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
 		CompletableFuture<VisitedLocation> cfVisitedLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
-		//Execute async the rewards calculation so user don't wait for result
-		//Return a CompletableFuture<Void>
+		/*
+		 * Execute async the rewards calculation so user don't wait for result
+		 * Return a CompletableFuture<Void>
+		 * You can chain for example : .orTimeOut(20, TimeUnit.MINUTES) to exceptionally complete the CompletableFuture after a specified timeout period.
+		 * If the CompletableFuture is not completed before this timeout, a TimeoutException is thrown.
+		 */
 		cfVisitedLocation.thenComposeAsync(vL -> {
 				user.addToVisitedLocations(vL);
 				return rewardsService.calculateRewards(user);
-			}, esThreadPoolTGS);
+			}, esThreadPoolTGS);//.orTimeOut(20, TimeUnit.MINUTES);
 		return cfVisitedLocation;
 	}
 

@@ -1,11 +1,11 @@
 package com.openclassrooms.tourguide.user;
 
+import gpsUtil.location.VisitedLocation;
+import tripPricer.Provider;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import gpsUtil.location.VisitedLocation;
-import tripPricer.Provider;
 
 public class User {
 	private final UUID userId;

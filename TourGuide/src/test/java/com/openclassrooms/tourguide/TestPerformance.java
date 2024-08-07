@@ -1,6 +1,16 @@
 package com.openclassrooms.tourguide;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.openclassrooms.tourguide.helper.InternalTestHelper;
+import com.openclassrooms.tourguide.service.RewardsService;
+import com.openclassrooms.tourguide.service.TourGuideService;
+import com.openclassrooms.tourguide.user.User;
+import gpsUtil.GpsUtil;
+import gpsUtil.location.Attraction;
+import gpsUtil.location.VisitedLocation;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.time.StopWatch;
+import org.junit.jupiter.api.Test;
+import rewardCentral.RewardCentral;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,19 +18,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.time.StopWatch;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-
-import gpsUtil.GpsUtil;
-import gpsUtil.location.Attraction;
-import gpsUtil.location.VisitedLocation;
-import rewardCentral.RewardCentral;
-import com.openclassrooms.tourguide.helper.InternalTestHelper;
-import com.openclassrooms.tourguide.service.RewardsService;
-import com.openclassrooms.tourguide.service.TourGuideService;
-import com.openclassrooms.tourguide.user.User;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Slf4j
 public class TestPerformance {
@@ -63,19 +62,21 @@ public class TestPerformance {
 
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
-		//To Collect all the CompletableFutures
+		// To Collect all the CompletableFutures
 		List<CompletableFuture<VisitedLocation>> completableFutures = new ArrayList<>();
 		for (User user : allUsers) {
 			completableFutures.add(tourGuideService.trackUserLocation(user));
 		}
-		// wait for the completion of all theCompletableFutures
+		// wait for the completion of all the CompletableFutures until 15 minutes before throwing TimeoutException
 		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
-		allCompletableFutures.join();
-		// finished using it so close Executor Service
-		tourGuideService.getEsThreadPoolTGS().shutdownNow();
-		stopWatch.stop();
-		tourGuideService.tracker.stopTracking();
-
+		try {
+			assertDoesNotThrow(()-> allCompletableFutures.get(15, TimeUnit.MINUTES));
+		} finally {
+			// finished using it so close Executor Service
+			tourGuideService.getEsThreadPoolTGS().shutdownNow();
+			stopWatch.stop();
+			tourGuideService.tracker.stopTracking();
+		}
 		System.out.println("highVolumeTrackLocation: Time Elapsed: "
 				+ TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()) + " seconds.");
 		assertTrue(TimeUnit.MINUTES.toSeconds(15) >= TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()));
@@ -98,21 +99,23 @@ public class TestPerformance {
 		allUsers = tourGuideService.getAllUsers();
 		allUsers.forEach(u -> u.addToVisitedLocations(new VisitedLocation(u.getUserId(), attraction, new Date())));
 
-		//To Collect all the CompletableFutures
+		// To Collect all the CompletableFutures
 		List<CompletableFuture<Void>> completableFutures = new ArrayList<>();
 		allUsers.forEach(u -> completableFutures.add(rewardsService.calculateRewards(u)));
-		// wait for the completion of all theCompletableFutures
+		// wait for the completion of all the CompletableFutures until 20 minutes before throwing TimeoutException
 		CompletableFuture<Void> allCompletableFutures = CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0]));
-		allCompletableFutures.join();
-		// finished using it so close Executor Service
-		rewardsService.getEsThreadPoolRS().shutdownNow();
-		for (User user : allUsers) {
-			assertTrue(user.getUserRewards().size() > 0);
+		try {
+			assertDoesNotThrow(() ->allCompletableFutures.get(20, TimeUnit.MINUTES));
+		} finally {
+			// finished using it so close Executor Service
+			rewardsService.getEsThreadPoolRS().shutdownNow();
+			for (User user : allUsers) {
+				assertTrue(user.getUserRewards().size() > 0);
+			}
+
+			stopWatch.stop();
+			tourGuideService.tracker.stopTracking();
 		}
-
-		stopWatch.stop();
-		tourGuideService.tracker.stopTracking();
-
 		System.out.println("highVolumeGetRewards: Time Elapsed: " + TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime())
 				+ " seconds.");
 		assertTrue(TimeUnit.MINUTES.toSeconds(20) >= TimeUnit.MILLISECONDS.toSeconds(stopWatch.getTime()));
