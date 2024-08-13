@@ -9,7 +9,7 @@ on:
     branches: [ master, develop, 'feature/addGitHubCI' ]
 
 jobs:
-  before_all:
+  beforeAll:
     runs-on: ubuntu-latest
     steps:
       - name: Set up JDK 17
@@ -19,7 +19,10 @@ jobs:
           distribution: 'adopt'
           cache: 'maven'
       - name: Run mvn install
-        run: mvn install
+        run: |
+          mvn -B install:install-file -Dfile='./TourGuide/libs/gpsUtil.jar' -DgroupId=gpsUtil -DartifactId=gpsUtil -Dversion=1.0.0 -Dpackaging=jar'
+          mvn -B install:install-file -Dfile='./TourGuide/libs/RewardCentral.jar' -DgroupId=rewardCentral -DartifactId=rewardCentral -Dversion=1.0.0 -Dpackaging=jar'
+          mvn -B install:install-file -Dfile='./TourGuide/libs/TripPricer.jar' -DgroupId=tripPricer -DartifactId=tripPricer -Dversion=1.0.0 -Dpackaging=jar'
 
   build:
     needs: beforeAll
