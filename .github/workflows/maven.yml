@@ -9,13 +9,21 @@ on:
     branches: [ master, develop, 'feature/addGitHubCI' ]
 
 jobs:
-  beforeAll:
+  before_all:
     runs-on: ubuntu-latest
-    run: mvn -B install:install-file -Dfile='./TourGuide/libs/gpsUtil.jar -DgroupId=gpsUtil -DartifactId=gpsUtil -Dversion=1.0.0 -Dpackaging=jar'
+    steps:
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: 'maven'
+      - name: Run mvn install
+        run: mvn install
 
   build:
+    needs: beforeAll
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -26,7 +34,6 @@ jobs:
           cache: 'maven'
       - name: Build, Test, Package with Maven
         run: mvn -B package --file './TourGuide/pom.xml'
-
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       - name: Update dependency graph
         uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
