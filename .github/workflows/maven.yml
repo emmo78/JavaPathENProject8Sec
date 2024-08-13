@@ -9,6 +9,11 @@ on:
     branches: [ master, develop, 'feature/addGitHubCI' ]
 
 jobs:
+  beforeAll:
+    runs-on: ubuntu-latest
+    steps:
+      run: mvn -B install:install-file -Dfile='./TourGuide/libs/gpsUtil.jar -DgroupId=gpsUtil -DartifactId=gpsUtil -Dversion=1.0.0 -Dpackaging=jar'
+
   build:
     runs-on: ubuntu-latest
 
