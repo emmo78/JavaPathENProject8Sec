@@ -19,7 +19,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-          cache: 'maven'
+          cache: maven
       - name: Run mvn install
         run: |
           mvn -B install:install-file -Dfile='./libs/gpsUtil.jar' -DgroupId=gpsUtil -DartifactId=gpsUtil -Dversion=1.0.0 -Dpackaging=jar
