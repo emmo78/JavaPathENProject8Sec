@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v4
         with:
           key: maven
-        run: mvn -B compile
+      - run: mvn -B compile
   test:
     needs: build
     runs-on: ubuntu-latest
