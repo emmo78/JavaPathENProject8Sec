@@ -6,6 +6,9 @@ on:
     branches: [ master, develop, 'feature/addGitHubCI' ]
   pull_request:
     branches: [ master, develop, 'feature/addGitHubCI' ]
+  merge_group:
+    branches: [ master, develop, 'feature/addGitHubCI' ]
+
 defaults:
   run:
     working-directory: TourGuide
@@ -68,6 +71,11 @@ jobs:
         run: |
           echo 'Package, skip test done before'
           mvn -B package -DskipTests
+          mkdir staging && cp target/*.jar staging
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Package
+          path: staging
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       # name: Update dependency graph
