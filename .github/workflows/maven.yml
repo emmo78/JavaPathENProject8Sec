@@ -3,11 +3,11 @@
 name: TourGuide CI
 on:
   push:
-    branches: [ master, develop, 'feature/addGitHubCI' ]
+    branches: [ master, develop ]
   pull_request:
-    branches: [ master, develop, 'feature/addGitHubCI' ]
+    branches: [ master, develop ]
   merge_group:
-    branches: [ master, develop, 'feature/addGitHubCI' ]
+    branches: [ master, develop ]
 
 defaults:
   run:
