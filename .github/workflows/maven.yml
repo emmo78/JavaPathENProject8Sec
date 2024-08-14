@@ -72,11 +72,10 @@ jobs:
           echo 'Package, skip test done before'
           mvn -B package -DskipTests
           mkdir staging && cp target/*.jar staging
-          ls -l | less
       - uses: actions/upload-artifact@v4
         with:
           name: Package
-          path: staging
+          path: ./TourGuide/staging
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       # name: Update dependency graph
