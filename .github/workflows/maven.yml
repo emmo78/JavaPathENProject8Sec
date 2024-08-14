@@ -49,7 +49,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
-      - name: Test, Package with Maven
+      - name: Test with Maven
         run: |
           echo 'Skip TestPerformance'
           mvn -B test -Dtest='!TestPerformance'
@@ -64,9 +64,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
-      - name: Test, Package with Maven
+      - name: Package with Maven
         run: |
-          cd TourGuide
           echo 'Skip TestPerformance'
           mvn -B package
 
