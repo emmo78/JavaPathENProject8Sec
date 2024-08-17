@@ -72,7 +72,7 @@ public class TestPerformance {
 		try {
 			assertDoesNotThrow(()-> allCompletableFutures.get(15, TimeUnit.MINUTES));
 		} finally {
-			// finished using it so close Executor Service
+			// close Executor Service after finishing using it
 			tourGuideService.getEsThreadPoolTGS().shutdownNow();
 			stopWatch.stop();
 			tourGuideService.tracker.stopTracking();
@@ -107,7 +107,7 @@ public class TestPerformance {
 		try {
 			assertDoesNotThrow(() ->allCompletableFutures.get(20, TimeUnit.MINUTES));
 		} finally {
-			// finished using it so close Executor Service
+			// close Executor Service after finishing using it
 			rewardsService.getEsThreadPoolRS().shutdownNow();
 			for (User user : allUsers) {
 				assertTrue(user.getUserRewards().size() > 0);

@@ -33,8 +33,7 @@ public class TourGuideService {
 	public final Tracker tracker;
 	boolean testMode = true;
 	/*
-	 * for Async methods, to run a corresponding execution step in another thread.
-	 * instead the common fork/join pool implementation of Executor
+	 * for Async methods, to run a corresponding execution step in another thread, instead the common fork/join pool implementation of Executor
 	 * Hardware : i7 6700 4 cores HT = 8 cpu Threads so tried 8 but fail, 16 was limit, 32 succeed
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html
 	 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
@@ -99,9 +98,10 @@ public class TourGuideService {
 	}
 
 	public CompletableFuture<VisitedLocation> trackUserLocation(User user) {
+		// Initiate an asynchronous task to retrieve the user's location
 		CompletableFuture<VisitedLocation> cfVisitedLocation = CompletableFuture.supplyAsync(() -> gpsUtil.getUserLocation(user.getUserId()), esThreadPoolTGS);
 		/*
-		 * Execute async the rewards calculation so user don't wait for result
+		 * Execute async the rewards calculation so user don't wait for location
 		 * Return a CompletableFuture<Void>
 		 * You can chain for example : .orTimeOut(20, TimeUnit.MINUTES) to exceptionally complete the CompletableFuture after a specified timeout period.
 		 * If the CompletableFuture is not completed before this timeout, a TimeoutException is thrown.
@@ -114,23 +114,22 @@ public class TourGuideService {
 	}
 
 	public List<NearbyAttractionDTO> getNearByAttractions(VisitedLocation visitedLocation) {
-		List<NearbyAttractionDTO> fiveClosestAttractions = gpsUtil.getAttractions()
-				.parallelStream()
-				.map(attraction ->  NearbyAttractionDTO.builder()
-						.attraction(attraction)
-						.attractionName(attraction.attractionName)
-						.attractionLongitude(attraction.longitude)
-						.attractionLatitude(attraction.latitude)
-						.userLongitude(visitedLocation.location.longitude)
-						.userLatitude(visitedLocation.location.latitude)
-						.build())
-				.peek(nAD -> nAD.calculateDistanceUserAttractionMiles(rewardsService, visitedLocation))
-				.sorted((nAD1, nAD2) -> nAD1.getDistanceUserAttractionMiles() > nAD2.getDistanceUserAttractionMiles() ? 1 : -1)
-				.limit(5)
-				.peek(nAD -> nAD.setVisitingRewardAttractionPoints(
-						rewardsService.getRewardPoints(nAD.getAttraction(), visitedLocation.userId)))
-				.toList();
-		return fiveClosestAttractions;
+		return gpsUtil.getAttractions()
+			.parallelStream()
+			.map(attraction ->  NearbyAttractionDTO.builder()
+					.attraction(attraction)
+					.attractionName(attraction.attractionName)
+					.attractionLongitude(attraction.longitude)
+					.attractionLatitude(attraction.latitude)
+					.userLongitude(visitedLocation.location.longitude)
+					.userLatitude(visitedLocation.location.latitude)
+					.build())
+			.peek(nAD -> nAD.calculateDistanceUserAttractionMiles(rewardsService, visitedLocation))
+			.sorted((nAD1, nAD2) -> nAD1.getDistanceUserAttractionMiles() > nAD2.getDistanceUserAttractionMiles() ? 1 : -1)
+			.limit(5)
+			.peek(nAD -> nAD.setVisitingRewardAttractionPoints(
+					rewardsService.getRewardPoints(nAD.getAttraction(), visitedLocation.userId)))
+			.toList();
 	}
 
 	private void addShutDownHook() {
