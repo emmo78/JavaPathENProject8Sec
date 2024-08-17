@@ -14,6 +14,7 @@ public class User {
 	private String emailAddress;
 	private Date latestLocationTimestamp;
 	private List<VisitedLocation> visitedLocations =  new CopyOnWriteArrayList<>();
+	//ConcurrentHashMaps are designed to give you predictable behavior and performance.
 	private Map<String, UserReward> userRewards =  new ConcurrentHashMap<>();
 	private UserPreferences userPreferences = new UserPreferences();
 	private List<Provider> tripDeals = new ArrayList<>();
