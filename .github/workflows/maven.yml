@@ -54,9 +54,7 @@ jobs:
           distribution: 'adopt'
           cache: 'maven'
       - name: Test with Maven
-        run: |
-          echo 'Skip TestPerformance'
-          mvn -B test -Dtest='!TestPerformance'
+        run: mvn -B test
   package:
     needs: test
     runs-on: ubuntu-latest
