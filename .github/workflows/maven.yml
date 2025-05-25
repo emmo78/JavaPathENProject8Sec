@@ -1,6 +1,10 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# This workflow will consume the sec one.
 
 name: TourGuide CI
+
+runs-on: self-hosted
+
 on:
   push:
     branches: [ master, develop ]
@@ -55,8 +59,18 @@ jobs:
           cache: 'maven'
       - name: Test with Maven
         run: mvn -B test
-  package:
+
+  consumesec:
     needs: test
+    steps:
+      - name: Appel workflow centralisé
+        call-reusable:
+         uses: MonOrganisation/JavaPathENProject8Sec/.github/workflows/scan.yml@main
+         with:
+          env: prod
+
+  package:
+    needs: consumesec
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
