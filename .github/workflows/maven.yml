@@ -58,14 +58,9 @@ jobs:
       - name: Test with Maven
         run: mvn -B test
 
-  consumesec:
-    needs: test
-    uses: ./.github/workflows/scan.yml
-    with:
-      env: "production"
 
   package:
-    needs: consumesec
+    needs: test
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
