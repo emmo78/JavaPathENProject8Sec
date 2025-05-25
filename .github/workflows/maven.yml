@@ -63,10 +63,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Appel workflow centralisé
-        call-reusable:
-         uses: MonOrganisation/JavaPathENProject8Sec/.github/workflows/scan.yml@main
-         with:
-          env: prod
+        uses: MonOrganisation/JavaPathENProject8Sec/.github/workflows/scan.yml@main
+        with:
+         env: prod
 
   package:
     needs: consumesec
