@@ -60,14 +60,7 @@ jobs:
 
   consumesec:
     needs: test
-    runs-on: self-hosted
-    steps:
-      - name: Appel workflow centralisé
-        call-reusable:
-          uses: MonOrganisation/JavaPathENProject8Sec/.github/workflows/scan.yml@main
-          with:
-            env: prod
-        run: echo "test"
+    uses: ./.github/workflows/scan.yml
 
   package:
     needs: consumesec
