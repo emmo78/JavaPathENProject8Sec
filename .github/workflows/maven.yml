@@ -60,10 +60,12 @@ jobs:
 
   consumesec:
     needs: test
-    uses: ../.github/workflows/scan.yml@master
+    uses: ./.github/workflows/scan.yml
+    with:
+      env: "production"
 
   package:
-    needs:  consumesec
+    needs: consumesec
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
